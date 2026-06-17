@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: app.websocket.ChatWebSocketServerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.457 s <<< FAILURE! -- in app.websocket.ChatWebSocketServerTest
+app.websocket.ChatWebSocketServerTest.restoresDirectHistoryInSessionReadyAfterUserRejoinsWithSameName -- Time elapsed: 0.064 s <<< ERROR!
+app.session.SessionService$ActiveSessionConflictException: Nama pengguna sudah aktif di perangkat lain.
+	at app.session.SessionService.createSession(SessionService.java:35)
+	at app.session.SessionService.createSession(SessionService.java:23)
+	at app.websocket.ChatWebSocketServerTest.restoresDirectHistoryInSessionReadyAfterUserRejoinsWithSameName(ChatWebSocketServerTest.java:213)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

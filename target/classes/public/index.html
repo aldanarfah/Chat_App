@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Chat Realtime</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app-stage">
+<div id="appShell" class="app-shell" data-mobile-view="list">
+    <section id="sessionView" class="session-view">
+        <div class="session-card session-card--welcome">
+            <div class="session-brand">
+                <div class="brand-mark session-brand__mark" aria-hidden="true">RC</div>
+                <div class="session-brand__text">Ruang Chat</div>
+            </div>
+
+            <div class="session-copy">
+                <div class="session-card__badge">Akses Cepat</div>
+                <h1>Halo, selamat datang</h1>
+                <p>
+                    Masuk cepat untuk lanjut ke room, direct message, dan file realtime. Untuk saat ini cukup isi nama tampilan Anda.
+                </p>
+            </div>
+
+            <div class="session-profile-row" aria-label="Preview profil">
+                <div id="sessionAvatarPreview" class="session-avatar-preview">RC</div>
+                <div class="session-profile-copy">
+                    <strong id="sessionPreviewName">Nama Anda</strong>
+                    <span>Avatar dibuat otomatis dari nama tampilan.</span>
+                </div>
+            </div>
+
+            <form id="sessionForm" class="session-form">
+                <label class="field-label" for="nameInput">Nama tampilan</label>
+                <div class="session-input-shell">
+                    <span class="session-input-shell__icon" data-icon="profile"></span>
+                    <div class="session-input-shell__body">
+                        <span class="session-input-shell__label">Masuk sebagai</span>
+                        <input id="nameInput" name="username" type="text" maxlength="32" autocomplete="nickname"
+                               placeholder="Contoh: Budi" required>
+                    </div>
+                </div>
+                <p class="session-helper">
+                    Masuk dengan nama untuk lanjut ke room, direct message, dan berbagi file realtime.
+                </p>
+                <button id="connectButton" class="primary-button" type="submit">Masuk ke Chat</button>
+            </form>
+            <div class="session-card__footer">
+                <span id="sessionHint">Gunakan nama yang belum dipakai pengguna aktif.</span>
+                <span class="session-card__status">HTTP 8080 • WS 8887</span>
+            </div>
+        </div>
+    </section>
+
+    <aside class="icon-rail" aria-label="Navigasi utama">
+        <div class="icon-rail__top">
+            <div class="brand-mark" aria-hidden="true">RC</div>
+            <button class="icon-button icon-button--active" type="button" aria-label="Daftar chat">
+                <span class="icon-slot" data-icon="chat"></span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Filter room favorit" disabled>
+                <span class="icon-slot" data-icon="grid"></span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Kontak aktif" disabled>
+                <span class="icon-slot" data-icon="users"></span>
+            </button>
+        </div>
+        <div class="icon-rail__bottom">
+            <button id="createRoomRailButton" class="icon-button" type="button" aria-label="Buat room baru">
+                <span class="icon-slot" data-icon="plus"></span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Pengaturan" disabled>
+                <span class="icon-slot" data-icon="settings"></span>
+            </button>
+            <div id="railUserChip" class="rail-user-chip" aria-label="Pengguna aktif">--</div>
+        </div>
+    </aside>
+
+    <aside class="conversation-sidebar" aria-label="Daftar percakapan">
+        <header class="sidebar-header">
+            <div>
+                <div class="eyebrow">Ruang Chat Realtime</div>
+                <h2>Percakapan</h2>
+            </div>
+            <div class="header-actions">
+                <button id="focusSearchButton" class="ghost-icon-button" type="button" aria-label="Cari percakapan">
+                    <span class="icon-slot" data-icon="search"></span>
+                </button>
+                <button id="createRoomButton" class="ghost-icon-button" type="button" aria-label="Buat room baru">
+                    <span class="icon-slot" data-icon="compose"></span>
+                </button>
+            </div>
+        </header>
+
+        <div id="connectionStrip" class="connection-strip connection-strip--idle" aria-live="polite">
+            Belum terhubung.
+        </div>
+
+        <div class="sidebar-search">
+            <label class="sr-only" for="conversationSearch">Cari percakapan</label>
+            <span class="icon-slot sidebar-search__icon" data-icon="search"></span>
+            <input id="conversationSearch" type="search" placeholder="Cari room atau orang">
+        </div>
+
+        <div id="filterTabs" class="filter-tabs" role="tablist" aria-label="Filter percakapan">
+            <button class="filter-tab filter-tab--active" type="button" data-filter="all">Semua</button>
+            <button class="filter-tab" type="button" data-filter="room">Grup</button>
+            <button class="filter-tab" type="button" data-filter="dm">Orang</button>
+        </div>
+
+        <div class="conversation-list-meta">
+            <span id="conversationSectionLabel">Semua Percakapan</span>
+            <span id="conversationCountChip" class="count-chip">0</span>
+        </div>
+
+        <div id="conversationList" class="conversation-list" aria-live="polite"></div>
+    </aside>
+
+    <main class="chat-panel" aria-label="Panel percakapan aktif">
+        <header id="chatHeader" class="chat-header"></header>
+        <section id="messageTimeline" class="message-timeline" aria-live="polite"></section>
+        <form id="composerForm" class="composer">
+            <input id="fileInput" type="file" hidden accept="image/*,.pdf,.txt,.zip">
+            <button id="attachButton" class="ghost-icon-button composer-button" type="button"
+                    aria-label="Lampirkan file">
+                <span class="icon-slot" data-icon="paperclip"></span>
+            </button>
+            <div class="composer-input">
+                <label class="sr-only" for="messageInput">Pesan</label>
+                <textarea id="messageInput" rows="1" placeholder="Ketik pesan..." aria-label="Tulis pesan"></textarea>
+                <div class="composer-meta">
+                    <span id="typingState">Siap mengirim pesan.</span>
+                    <span id="uploadState"></span>
+                </div>
+            </div>
+            <button id="sendButton" class="primary-button composer-send" type="submit" aria-label="Kirim pesan">
+                <span class="icon-slot" data-icon="send"></span>
+            </button>
+        </form>
+    </main>
+
+    <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+</div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

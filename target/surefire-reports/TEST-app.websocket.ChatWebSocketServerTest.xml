@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="app.websocket.ChatWebSocketServerTest" time="4.457" tests="8" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/test-classes:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/classes:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/java-websocket/Java-WebSocket/1.5.6/Java-WebSocket-1.5.6.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/slf4j/slf4j-simple/2.0.16/slf4j-simple-2.0.16.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk-23.0.2-oracle-x64/lib"/>
+    <property name="sun.java.command" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/surefire/surefirebooter-20260610153803316_3.jar /media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/surefire 2026-06-10T15-38-02_809-jvmRun1 surefire-20260610153803316_1tmp surefire_0-20260610153803316_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/test-classes:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/classes:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/java-websocket/Java-WebSocket/1.5.6/Java-WebSocket-1.5.6.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/slf4j/slf4j-simple/2.0.16/slf4j-simple-2.0.16.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/zpreoz"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk-23.0.2-oracle-x64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/target/surefire/surefirebooter-20260610153803316_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="23.0.2+7-58"/>
+    <property name="user.name" value="zpreoz"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-179-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="23.0.2"/>
+    <property name="user.dir" value="/media/zpreoz/New Volume/College/POLINEMA/SEMESTER-4/PEMROGRAMAN-JARINGAN/pemrogjar"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="23.0.2+7-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value=".m2/repository"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="routesRoomMessagesOnlyToRoomMembers" classname="app.websocket.ChatWebSocketServerTest" time="1.838">
+    <system-out><![CDATA[WebSocket server started on port 37117
+]]></system-out>
+  </testcase>
+  <testcase name="routesRoomFileMessagesToRoomMembers" classname="app.websocket.ChatWebSocketServerTest" time="0.147">
+    <system-out><![CDATA[WebSocket server started on port 38035
+]]></system-out>
+  </testcase>
+  <testcase name="restoresDirectHistoryInSessionReadyAfterUserRejoinsWithSameName" classname="app.websocket.ChatWebSocketServerTest" time="0.064">
+    <error message="Nama pengguna sudah aktif di perangkat lain." type="app.session.SessionService$ActiveSessionConflictException"><![CDATA[app.session.SessionService$ActiveSessionConflictException: Nama pengguna sudah aktif di perangkat lain.
+	at app.session.SessionService.createSession(SessionService.java:35)
+	at app.session.SessionService.createSession(SessionService.java:23)
+	at app.websocket.ChatWebSocketServerTest.restoresDirectHistoryInSessionReadyAfterUserRejoinsWithSameName(ChatWebSocketServerTest.java:213)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+]]></error>
+    <system-out><![CDATA[WebSocket server started on port 39579
+]]></system-out>
+  </testcase>
+  <testcase name="disconnectSessionSendsTakeoverErrorToOldClient" classname="app.websocket.ChatWebSocketServerTest" time="0.064">
+    <system-out><![CDATA[WebSocket server started on port 37551
+]]></system-out>
+  </testcase>
+  <testcase name="broadcastsNewRoomsToConnectedUsers" classname="app.websocket.ChatWebSocketServerTest" time="0.069">
+    <system-out><![CDATA[WebSocket server started on port 44179
+]]></system-out>
+  </testcase>
+  <testcase name="routesDirectFileMessagesOnlyToSenderAndTarget" classname="app.websocket.ChatWebSocketServerTest" time="1.125">
+    <system-out><![CDATA[WebSocket server started on port 40221
+]]></system-out>
+  </testcase>
+  <testcase name="routesDirectMessagesOnlyToSenderAndTarget" classname="app.websocket.ChatWebSocketServerTest" time="1.085">
+    <system-out><![CDATA[WebSocket server started on port 38549
+]]></system-out>
+    <system-err><![CDATA[WebSocket error: null
+]]></system-err>
+  </testcase>
+  <testcase name="returnsErrorWhenRoomMessageIsSentWithoutMembership" classname="app.websocket.ChatWebSocketServerTest" time="0.048">
+    <system-out><![CDATA[WebSocket server started on port 44191
+]]></system-out>
+  </testcase>
+</testsuite>

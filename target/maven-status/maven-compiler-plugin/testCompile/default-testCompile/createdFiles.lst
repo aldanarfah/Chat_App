@@ -1,0 +1,4 @@
+app/http/PublicFileServiceTest.class
+app/websocket/ChatWebSocketServerTest$TestClient.class
+app/websocket/ChatWebSocketServerTest.class
+app/websocket/ClientNameResolverTest.class
